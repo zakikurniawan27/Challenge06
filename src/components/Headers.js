@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FiLogOut } from 'react-icons/fi'
-import GetUsername from './GetUsername'
 
 function Headers({ search, setSearch, handleSearch, handleGetPopularMovie, setToken, token }) {
   const navigate = useNavigate()
@@ -110,7 +109,6 @@ function Headers({ search, setSearch, handleSearch, handleGetPopularMovie, setTo
             </>
           ): (
             <div className='flex flex-row gap-5'>
-              <GetUsername/>
               <button className='btn' onClick={handleLogout}> 
                 <FiLogOut className='text-white'/> 
               </button>

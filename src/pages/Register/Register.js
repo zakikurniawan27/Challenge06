@@ -9,13 +9,13 @@ import GoogleLogin from "../../components/GoogleLogin";
 
 const Register = ({token, setToken}) =>{
     const navigate = useNavigate()
-    const [username, setUsername] = useState("")
+    const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     const handleSubmit = async (e) =>{
         e.preventDefault()
-        if(username === ""){
+        if(name === ""){
             alert("username is required")
             return
         }
@@ -27,9 +27,9 @@ const Register = ({token, setToken}) =>{
             alert("password is required")
             return
         }
-        if(username !== "" && email !== "" && password !== ""){
+        if(name !== "" && email !== "" && password !== ""){
             const data = {
-                username, 
+                name, 
                 email, 
                 password
             }
@@ -70,8 +70,8 @@ const Register = ({token, setToken}) =>{
                                                 </span>
                                                 <input type="text" placeholder="Masukan Username" 
                                                 className="input input-bordered input-sm bg-white border-gray-400 w-96 text-black" 
-                                                value={username} 
-                                                onChange={(e) => setUsername(e.target.value)
+                                                value={name} 
+                                                onChange={(e) => setName(e.target.value)
                                                 }/>
                                             </label>
                                         </div>
@@ -125,7 +125,7 @@ const Register = ({token, setToken}) =>{
                                         </button>
                                         <GoogleLogin setToken={setToken} label="Sign Up with Google"/>
                                     </div>
-                                    <ButtonSubmit username={username} password={password} email={email} label="Register"/>
+                                    <ButtonSubmit username={name} password={password} email={email} label="Register"/>
                                 </form>
                             </div>
                         </div>

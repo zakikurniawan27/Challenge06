@@ -45,7 +45,7 @@ const Login = ({token, setToken}) => {
         }
       };
     return (
-        <div className="h-screen">
+        <div className="bg-white h-screen">
             {!token ? (
                 <>
                     <div className="flex justify-center pt-44">
